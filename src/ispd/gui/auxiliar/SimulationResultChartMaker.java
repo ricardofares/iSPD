@@ -93,11 +93,11 @@ public final class SimulationResultChartMaker {
         final var communicationCharts
                 = this.makeCommunicationCharts(metrics.getMetricasComunicacao());
 
-        this.processingBarChart = processingCharts.getFirst();
-        this.processingPieChart = processingCharts.getSecond();
+        this.processingBarChart = processingCharts.first();
+        this.processingPieChart = processingCharts.second();
 
-        this.communicationBarChart = communicationCharts.getFirst();
-        this.communicationPieChart = communicationCharts.getSecond();
+        this.communicationBarChart = communicationCharts.first();
+        this.communicationPieChart = communicationCharts.second();
     }
 
     /**
@@ -120,11 +120,11 @@ public final class SimulationResultChartMaker {
         final var computingPowerPerMachineChartInfo
                 = this.makeComputingPowerPerMachineChart(queueNetwork);
 
-        this.computingPowerPerMachineChart = computingPowerPerMachineChartInfo.getFirst();
+        this.computingPowerPerMachineChart = computingPowerPerMachineChartInfo.first();
         this.computingPowerPerUserChart = this.makeComputingPowerPerUserChart(taskList,
-                computingPowerPerMachineChartInfo.getSecond(), queueNetwork);
+                computingPowerPerMachineChartInfo.second(), queueNetwork);
         this.computingPowerPerTaskChart = this.makeComputingPowerPerTaskChart(taskList,
-                computingPowerPerMachineChartInfo.getSecond());
+                computingPowerPerMachineChartInfo.second());
     }
 
     /**
